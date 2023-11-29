@@ -7,13 +7,7 @@ services:
       - ./:/var/www
       - ./_docker/nginx/conf.d:/etc/nginx/conf.d
     ports:
-      # Nuxt port
       - 8080:80
-      # Laravel port
-      # - 8081:81
-    # links:
-      # - client
-      # - app      
     depends_on:
       - app
     container_name: project_nginx
